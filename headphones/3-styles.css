@@ -1,0 +1,644 @@
+/* ===========================
+   CSS RESET
+   =========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ===========================
+   CSS VARIABLES
+   =========================== */
+:root {
+  /* Colors */
+  --color-primary: #ff6565;
+  --color-dark: #071629;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-primary: "Source Sans Pro", sans-serif;
+  --font-secondary: "SpinCycleOT", cursive;
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 2rem; /* 32px */
+  --font-size-2xl: 2.6875rem; /* 43px */
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.625rem; /* 10px */
+  --spacing-sm: 0.8125rem; /* 13px */
+  --spacing-md: 1.25rem; /* 20px */
+  --spacing-lg: 1.875rem; /* 30px */
+  --spacing-xl: 2.5rem; /* 40px */
+  --spacing-2xl: 3.5rem; /* 56px */
+  --spacing-3xl: 6.125rem; /* 98px */
+
+  /* Layout */
+  --container-max-width: 1000px;
+  --container-padding: var(--spacing-lg);
+  --border-radius: 1.375rem; /* 22px */
+
+  /* Transitions */
+  --transition-speed: 0.3s;
+
+  /* Breakpoints */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+}
+
+/* ===========================
+   FONT FACES
+   =========================== */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("fonts/SourceSansPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("fonts/SourceSansPro-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("fonts/SourceSansPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpinCycleOT";
+  src: url("fonts/spincycle_ot.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+.btn {
+  padding: var(--spacing-sm) calc(var(--spacing-lg) + 1px);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+/* ===========================
+   HEADER / HERO SECTION
+   =========================== */
+.header {
+  background-image: url("assets/images/headphones_hero_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 800px;
+  padding-bottom: var(--spacing-xl);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: calc(var(--spacing-lg) - 2px);
+  padding-bottom: var(--spacing-lg);
+}
+
+.nav__logo {
+  width: 161px;
+  height: auto;
+}
+
+.nav__list {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.nav__link {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  transition: color var(--transition-speed) ease;
+}
+
+.nav__link:hover,
+.nav__link:active {
+  color: var(--color-primary);
+}
+
+.hero {
+  text-align: center;
+  margin-top: 19.5rem;
+}
+
+.hero__heading {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0;
+}
+
+.hero__subheading {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero__cta {
+  margin-bottom: 4rem;
+}
+
+.hero__description {
+  max-width: 637px;
+  margin: 0 auto;
+  line-height: 1.625;
+}
+
+/* ===========================
+   SECTION HEADERS
+   =========================== */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.section-header__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-header__description {
+  max-width: 637px;
+  margin: 0 auto;
+  line-height: 1.625;
+}
+
+/* ===========================
+   WHAT WE DO SECTION
+   =========================== */
+.section--light {
+  color: var(--color-dark);
+  padding: 11.875rem 0;
+}
+
+.features {
+  display: flex;
+  margin-right: 58px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature {
+  flex: 1;
+  min-width: 207px;
+  max-width: 207px;
+  text-align: center;
+}
+
+.feature__icon {
+  color: var(--color-primary);
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.feature__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: 1.5rem 0 var(--spacing-sm);
+}
+
+.feature__description {
+  font-size: var(--font-size-sm);
+  line-height: 1.625;
+}
+
+/* ===========================
+   OUR RESULTS SECTION
+   =========================== */
+.section--dark {
+  background-image: url("assets/images/headphones_hero_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 8.8125rem 0 6.25rem;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.result {
+  position: relative;
+  width: 190px;
+  height: 190px;
+}
+
+.result__image {
+  width: 100%;
+  height: 100%;
+}
+
+.result__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.result__number {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  line-height: 1;
+}
+
+.result__label {
+  font-size: var(--font-size-sm);
+  max-width: 111px;
+}
+
+/* ===========================
+   CONTACT FORM SECTION
+   =========================== */
+.section--contact {
+  color: var(--color-dark);
+  padding: 6.875rem 0 8.125rem;
+}
+
+.section--contact .section-header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.form {
+  max-width: 335px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form__group {
+  margin-bottom: 2.8125rem;
+  position: relative;
+}
+
+.form__label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+  transition: color var(--transition-speed) ease;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-dark);
+  background: transparent;
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-dark);
+  transition: border-color var(--transition-speed) ease;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: none;
+  border-bottom-color: var(--color-primary);
+}
+
+.form__input:focus + .form__label,
+.form__textarea:focus + .form__label {
+  color: var(--color-primary);
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 40px;
+  font-family: var(--font-primary);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: rgba(7, 22, 41, 0.4);
+  font-size: var(--font-size-sm);
+}
+
+/* Input validation styles */
+.form__input:invalid:not(:placeholder-shown),
+.form__textarea:invalid:not(:placeholder-shown) {
+  border-bottom-color: var(--color-primary);
+}
+
+.form__input:valid:not(:placeholder-shown) {
+  border-bottom-color: #4caf50;
+}
+
+/* Shake animation for invalid inputs */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+.form__input:invalid:focus,
+.form__textarea:invalid:focus {
+  animation: shake 0.5s ease;
+}
+
+.form__submit {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-speed) ease;
+  transform: translateY(0);
+}
+
+.form__submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form__submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+  background-color: var(--color-dark);
+  padding: 5.625rem 0 2.5rem;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.footer__logo {
+  width: 161px;
+}
+
+.social {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social__link {
+  display: block;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.social__link:hover,
+.social__link:active {
+  opacity: 0.9;
+}
+
+.holberton_school-icon-ic_facebook {
+    font-size: 30px;
+}
+
+.holberton_school-icon-ic_twitter{
+    font-size: 30px;
+}
+
+.holberton_school-icon-ic_instagram {
+    font-size: 30px;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: var(--font-size-xs);
+  opacity: 0.35;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .features {
+    gap: 3rem;
+  }
+
+  .results {
+    gap: 3.75rem;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  :root {
+    --container-padding: 1.25rem;
+  }
+
+  .header {
+    min-height: auto;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .nav__logo {
+    width: 150px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    margin-top: 6rem;
+  }
+
+  .hero__heading {
+    font-size: 1.75rem;
+  }
+
+  .hero__description {
+    max-width: 100%;
+    padding: 0 0.625rem;
+  }
+
+  .section--light {
+    padding: 3.75rem 0;
+  }
+
+  .section-header__description {
+    max-width: 100%;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .feature {
+    max-width: 100%;
+  }
+
+  .section--dark {
+    padding: 3.75rem 0;
+  }
+
+  .results {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .section--contact {
+    padding: 3.75rem 0;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+/* Small mobile adjustments */
+@media screen and (max-width: 375px) {
+  .hero__heading {
+    font-size: 1.5rem;
+  }
+
+  .section-header__title {
+    font-size: 1.75rem;
+  }
+
+  .result {
+    width: 160px;
+    height: 160px;
+  }
+
+  .result__number {
+    font-size: 2rem;
+  }
+}
+
+/* Hover effects for features and results (desktop only) */
+@media screen and (min-width: 481px) {
+  .feature {
+    transition: transform var(--transition-speed) ease;
+  }
+
+  .feature:hover {
+    transform: scale(1.05);
+  }
+
+  .result {
+    transition: transform var(--transition-speed) ease;
+  }
+
+  .result:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+}

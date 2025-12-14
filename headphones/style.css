@@ -1,0 +1,410 @@
+/* source_sans_pro font */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("fonts/SourceSansPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("fonts/SourceSansPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("fonts/SourceSansPro-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* spin_cycle regular font */
+@font-face {
+  font-family: "SpinCycleOT";
+  src: url("fonts/spincycle_ot.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: white;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1000.39px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background-image: url(assets/images/headphones_hero_1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+}
+
+header .navbar {
+  padding-top: 27.76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+}
+
+.navbar img {
+  width: 161px;
+  height: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+}
+
+.navbar a:hover:active {
+  color: #ff6565;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+.hero {
+  margin-top: 312.24px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero__lead {
+  font-family: "Source Sans Pro";
+  margin-bottom: 40px;
+}
+
+.hero__lead .lead {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.hero__lead p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.hero button {
+  border-style: none;
+  background-color: #ff6565;
+  color: white;
+  padding: 13px 31px;
+  border-radius: 22px;
+  font-family: inherit;
+  margin-bottom: 65px;
+}
+
+.hero button:hover:active {
+  opacity: 0.9;
+}
+
+.hero .head_line {
+  width: 637px;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 115px;
+}
+
+.about__section .container {
+  color: #071629;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__lead {
+  margin-top: 190px;
+  font-family: "Source Sans Pro";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.about__lead .lead {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.about__lead p {
+  width: 637px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card__features {
+  margin-top: 98px;
+  margin-bottom: 360px;
+  display: flex;
+  gap: 58px;
+  font-family: "Source Sans Pro";
+  /* justify-content: space-between; */
+}
+
+.card__features i {
+  color: #ff6565;
+}
+
+.card__features .holberton_school-icon-ic_sound {
+  display: inline-block;
+  font-size: calc((10cqw + 10cqh) / 2);
+}
+
+.card__features .holberton_school-icon-ic_video {
+  display: inline-block;
+  font-size: calc((10cqw + 10cqh) / 2);
+}
+
+.card__features .holberton_school-icon-ic_music {
+  display: inline-block;
+  font-size: calc((10cqw + 10cqh) / 2);
+}
+
+.card__features .holberton_school-icon-ic_hearing {
+  display: inline-block;
+  font-size: calc((10cqw + 10cqh) / 2);
+}
+
+.card__features div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__features div h3 {
+  margin-top: 23.62px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card__features div p {
+  width: 207px;
+  line-height: 1.6;
+  margin-top: 13px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.metric__section {
+  background-image: url(assets/images/headphones_hero_2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 650px;
+}
+
+.metric__section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metric__lead {
+  margin-top: 141px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro";
+}
+
+.metric__lead h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.metric__lead p {
+  margin-top: 40px;
+  width: 637px;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: center;
+}
+
+.peaks {
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 75px;
+}
+
+.peaks div {
+  width: 190px;
+  height: 190px;
+  position: relative; /* 🔑 anchor for absolute children */
+}
+
+.peaks .metric {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 10px;
+  position: absolute; /* 🔑 floats over the image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* true center */
+}
+
+.metric h3 {
+  font-size: 43px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.metric p {
+  width: 111px;
+  font-size: 14px;
+}
+
+/* .contact__form{
+  font-family: "Source Sans Pro";
+  color: #071629;
+}
+
+.contact__form .container{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form .container div{
+  margin-top: 110px;
+  border: 1px coral solid;
+  margin-bottom: 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form h2 {
+
+} */
+
+.contact__form {
+  font-family: "Source Sans Pro";
+  color: #071629;
+}
+
+.contact__form .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__form h2 {
+  margin-top: 110px;
+  margin-bottom: 56px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.contact__form div form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 335px;
+  margin-bottom: 45px;
+}
+
+textarea {
+  display: block;
+}
+
+/* 
+.contact__form .container div {
+  margin-top: 110px;
+  margin-bottom: 130px;
+  border: #ff6565 3px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__form h2 {
+  margin-bottom: 56px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+label, textarea {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 11px;
+}
+
+input, textarea {
+  margin-bottom: 45px;
+  width: 335px;
+  border-style: none;
+  border-bottom: 1px #071629 solid; */
+/* background: gray; */
+/* border-radius: 5px; */
+/* }
+
+textarea {
+  background: none;
+  width: 335px;
+  height: 100px;
+}
+
+input[type=submit] {
+  width: 162px;
+  margin-bottom: 0px;
+  background: #ff6565;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
